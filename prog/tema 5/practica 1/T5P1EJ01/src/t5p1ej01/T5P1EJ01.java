@@ -121,14 +121,20 @@ public class T5P1EJ01 {
         JOptionPane.showMessageDialog(null, "El valor maximo es: "+max+"\nEl valor minimo es: "+min);
     }
         public static void busqueda(){
-       float busqueda=Float.parseFloat(JOptionPane.showInputDialog("inserta un valor"));
+       float busqueda=Float.parseFloat(JOptionPane.showInputDialog("inserta un valor para buscar"));
        if(lista.contains(busqueda))
        JOptionPane.showMessageDialog(null, "El numero "+busqueda+" SI existe ");
        else
        JOptionPane.showMessageDialog(null, "El numero "+busqueda+" NO existe ");
     }
         public static void borrabusqueda(){
-        
+       float busqueda=Float.parseFloat(JOptionPane.showInputDialog("inserta un valor para borrarlo"));
+       if(lista.contains(busqueda)){
+       lista.remove(busqueda);
+       JOptionPane.showMessageDialog(null, "El numero "+busqueda+" se ha borrado en la lista ");    
+       }
+       else
+       JOptionPane.showMessageDialog(null, "El numero "+busqueda+" NO existe ");        
     }
         public static void aunarray(){
         
