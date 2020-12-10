@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class T5P1EJ01 {
 
-    public static ArrayList<Float> lista = new ArrayList();
+    public static ArrayList <Float> lista = new ArrayList();
     public static void main(String[] args) {
         rellenalista();
         try{
@@ -137,21 +137,64 @@ public class T5P1EJ01 {
        JOptionPane.showMessageDialog(null, "El numero "+busqueda+" NO existe ");        
     }
         public static void aunarray(){
-        
+            String visualizar="todoslos valores del array";
+       float[] matriz=new float[lista.size()];  
+       for(int i = 0; i < matriz.length;i++) {
+        matriz[i] = new Float(lista.get(i));
+        visualizar+="\n "+ matriz[i];
+        }
+      JOptionPane.showMessageDialog(null,visualizar); 
     } 
         public static void contenidoelementos(){
-        
+        JOptionPane.showMessageDialog(null, "Se ha introducido "+lista.size()+" numeros");  
     }
         public static void insertarfinal(){
-        
+      int continuar=0;
+        do{
+            try{
+                lista.add(Float.parseFloat(JOptionPane.showInputDialog("inserta un nuevo numero en el final")));
+              continuar=1;  
+            }
+        catch(Exception e){
+                    JOptionPane.showMessageDialog(null, "No se ha puesto un  numero");
+                }   
+        }while(continuar==0);     
     }
         public static void insertarsolicitud(){
-        
+         int continuar=0,posicion;
+        do{
+            try{
+                posicion=(Integer.parseInt(JOptionPane.showInputDialog("inserta la posicion del nuevo numero ")));
+                lista.add(posicion, Float.parseFloat(JOptionPane.showInputDialog("inserta un nuevo numero en la posicion "+posicion)));
+              continuar=1;  
+            }
+        catch(Exception e){
+                    JOptionPane.showMessageDialog(null, "No se ha puesto un  numero");
+                }   
+        }while(continuar==0);         
     }
         public static void borrarsolicitud(){
-        
+         int continuar=0,posicion;
+        do{
+            try{
+                posicion=(Integer.parseInt(JOptionPane.showInputDialog("inserta la posicion del numero  que quieres borrar")));
+                lista.remove(posicion);
+                JOptionPane.showMessageDialog(null, "se ha eliminado el numero en la cual estaba en la posicion "+posicion);
+               
+              continuar=1;  
+            }
+        catch(Exception e){
+                    JOptionPane.showMessageDialog(null, "No se ha puesto un  numero");
+                }   
+        }while(continuar==0);       
     }
         public static void sumaymedia(){
-        
+            float suma=0;
+            for(int i = 0; i < lista.size();i++) {
+        suma+= lista.get(i);
+        }
+         JOptionPane.showMessageDialog(null, "la suma de los "+lista.size()+" numeros es de: "+suma
+         + "\n y la media es de: "+(suma/lista.size()));
+                  
     }
 }
