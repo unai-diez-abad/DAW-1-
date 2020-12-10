@@ -140,7 +140,7 @@ public class T5P1EJ01 {
             String visualizar="todoslos valores del array";
        float[] matriz=new float[lista.size()];  
        for(int i = 0; i < matriz.length;i++) {
-        matriz[i] = new Float(lista.get(i));
+        matriz[i] = lista.get(i);
         visualizar+="\n "+ matriz[i];
         }
       JOptionPane.showMessageDialog(null,visualizar); 
