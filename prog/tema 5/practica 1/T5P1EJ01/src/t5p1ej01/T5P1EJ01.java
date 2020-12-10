@@ -178,9 +178,8 @@ public class T5P1EJ01 {
         do{
             try{
                 posicion=(Integer.parseInt(JOptionPane.showInputDialog("inserta la posicion del numero  que quieres borrar")));
+                JOptionPane.showMessageDialog(null, "se ha eliminado el numero "+lista.get(posicion)+" en la cual estaba en la posicion "+posicion);
                 lista.remove(posicion);
-                JOptionPane.showMessageDialog(null, "se ha eliminado el numero en la cual estaba en la posicion "+posicion);
-               
               continuar=1;  
             }
         catch(Exception e){
