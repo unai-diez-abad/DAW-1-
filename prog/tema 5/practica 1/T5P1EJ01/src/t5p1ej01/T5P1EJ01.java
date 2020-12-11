@@ -145,9 +145,11 @@ public class T5P1EJ01 {
         }
       JOptionPane.showMessageDialog(null,visualizar); 
     } 
-        public static void contenidoelementos(){
+        
+        public static void contenidoelementos() {
         JOptionPane.showMessageDialog(null, "Se ha introducido "+lista.size()+" numeros");  
     }
+        
         public static void insertarfinal(){
       int continuar=0;
         do{
@@ -160,6 +162,7 @@ public class T5P1EJ01 {
                 }   
         }while(continuar==0);     
     }
+        
         public static void insertarsolicitud(){
          int continuar=0,posicion;
         do{
@@ -173,6 +176,7 @@ public class T5P1EJ01 {
                 }   
         }while(continuar==0);         
     }
+        
         public static void borrarsolicitud(){
          int continuar=0,posicion;
         do{
@@ -187,6 +191,7 @@ public class T5P1EJ01 {
                 }   
         }while(continuar==0);       
     }
+        
         public static void sumaymedia(){
             float suma=0;
             for(int i = 0; i < lista.size();i++) {
