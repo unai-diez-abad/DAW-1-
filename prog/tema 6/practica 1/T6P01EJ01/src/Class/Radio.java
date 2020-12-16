@@ -28,17 +28,17 @@ public class Radio {
 
     @Override
     public String toString() {
-        return "Radio{" + "radio=" + radio + '}';
+        return "Radio{" + "radio=" + this.radio + '}';
     }
        public double circunferencia(){
        
-        return Math.round((2*PI*radio)*100.0)/100.0;
+        return Math.round((2*PI*this.radio)*100.0)/100.0;
     } 
     public double area(){
        
-        return Math.round((PI*radio*radio)*100.0)/100.0;
+        return Math.round((PI*this.radio*this.radio)*100.0)/100.0;
     }
     public double volumen(){
-        return Math.round(((4*PI*radio*radio*radio)/3)*100.0)/100.0;
+        return Math.round(((4*PI*this.radio*this.radio*this.radio)/3)*100.0)/100.0;
     }  
 }
