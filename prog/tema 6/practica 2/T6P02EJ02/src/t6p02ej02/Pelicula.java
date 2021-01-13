@@ -19,6 +19,15 @@ public class Pelicula{
 
     private ArrayList<Estudio>listaEstudio;
 
+    public Pelicula(String titulo, char[] año, float duracion, String tipo) {
+        this.titulo = titulo;
+        this.año = año;
+        this.duracion = duracion;
+        this.tipo = tipo;
+    }
+
+    
+    
     public Pelicula(String titulo, char[] año, float duracion, String tipo, ArrayList<Estudio> listaEstudio) {
         this.titulo = titulo;
         this.año = año;

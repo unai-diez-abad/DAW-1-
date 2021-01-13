@@ -41,6 +41,16 @@ public class Estudio{
         
     }
 
+    public Estudio(String nombre, String ciudad, String direcion, String dirWeb, Date fechaFundacion, String pais, ArrayList<Integer> telefonos) {
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+        this.direcion = direcion;
+        this.dirWeb = dirWeb;
+        this.fechaFundacion = fechaFundacion;
+        this.pais = pais;
+        this.telefonos = telefonos;
+    }
+
     public Estudio(String nombre, String ciudad, String direcion, String dirWeb, Date fechaFundacion, String pais, ArrayList<Integer> telefonos, ArrayList<Pelicula> ListaPeli) {
         this.nombre = nombre;
         this.ciudad = ciudad;
