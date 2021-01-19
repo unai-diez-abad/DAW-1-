@@ -27,7 +27,7 @@ public class Cliente extends Persona{
 
     @Override
     public String mostrar() {
-        return super.mostrar()+ "telefono_de_contacto=" + telefono_de_contacto + '}';
+        return super.mostrar()+ ", telefono_de_contacto=" + telefono_de_contacto + '}';
     }
     
     

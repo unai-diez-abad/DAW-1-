@@ -27,7 +27,7 @@ public class Empleado extends Persona{
     
       @Override
     public String mostrar() {
-         return super.mostrar()+ "sueldo_bruto=" + sueldo_bruto + '}';
+         return super.mostrar()+ ", sueldo_bruto=" + sueldo_bruto ;
     } 
  public Double calcular_salario_neto(){
      Double neto=0.0;

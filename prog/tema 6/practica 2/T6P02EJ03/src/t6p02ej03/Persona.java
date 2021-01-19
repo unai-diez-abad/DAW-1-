@@ -19,7 +19,7 @@ public class Persona {
     }
 
     public String mostrar() {
-        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + '}';
+        return  "nombre=" + nombre + ", edad=" + edad ;
     }
     
     

@@ -13,20 +13,28 @@ import java.util.ArrayList;
  */
 public class Directivo extends Empleado{
     private String categoria;
-    private static ArrayList<Empleado> listaEmpleados;
-    
+    private  ArrayList<Empleado> listaEmpleados;
+
+    public Directivo(String categoria, ArrayList<Empleado> listaEmpleados, Double sueldo_bruto, String nombre, int edad) {
+        super(sueldo_bruto, nombre, edad);
+        this.categoria = categoria;
+        this.listaEmpleados = listaEmpleados;
+    }
+
     public Directivo(String categoria, Double sueldo_bruto, String nombre, int edad) {
         super(sueldo_bruto, nombre, edad);
         this.categoria = categoria;
     }
 
-    public static ArrayList<Empleado> getListaEmpleados() {
+    public ArrayList<Empleado> getListaEmpleados() {
         return listaEmpleados;
     }
 
-    public static void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
-        Directivo.listaEmpleados = listaEmpleados;
+    public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
+        this.listaEmpleados = listaEmpleados;
     }
+
+
     
 
     public String getCategoria() {
@@ -39,7 +47,7 @@ public class Directivo extends Empleado{
 
     @Override
     public String mostrar() {
-        return super.mostrar()+ "categoria=" + categoria + '}';
+        return super.mostrar()+ ", categoria=" + categoria + '}';
     }
     
     

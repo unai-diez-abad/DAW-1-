@@ -23,6 +23,11 @@ public class Empresa {
         this.listaClientes = listaClientes;
     }
 
+
+    public Empresa(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
         return nombre;
     }
